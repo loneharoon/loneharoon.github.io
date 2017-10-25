@@ -1,0 +1,33 @@
+# jemdoc: menu{MENU}{index.html}
+
+= Haroon Rashid
+
+~~~
+{}{img_left}{files/pic-haroon.jpeg}{alt text}{200px}{250px}{IMGLINKTARGET}
+Ph.D. Student \n
+Email id: [haroonr@iiitd.ac.in] \n
+[https://www.iiitd.ac.in/ Indraprastha Institute of Information Technology (IIIT) - Delhi]  \n
+Okhla Industrial Estate, Phase-III, New Delhi \n
+Delhi, India - 110020 \n
+~~~
+
+I am a Ph.D. student in the Computer Science and Engineering department at Indraprastha Institute of Information Technology - Delhi, India. I work with  [https://www.pushpendrasingh.org/ Prof. Pushpendra Singh]. I work on energy sustainability within smart buildings. Specifically, my work is to detect energy wastage instances and to provide novel solutions to such problems.
+
+Prior to joining Ph.D., I did my masters from National Institute of Technology Rourkela, India. During masters, I worked with [http://www.nitrkl.ac.in/CS/~akturuk/ Dr. Ashok Kumar Turuk]. Main focus of the thesis was to localize sensor nodes both in static as well as in mobile scenarios.
+
+
+
+= News
+- xx-08-2017 :	Paper got accepted in ACM COMPUTE 2017 \n
+- xx-08-2017 :	Two papers got accepted in ACM BuildSys 2017 \n
+- xx-03-2017 :	Invited Talk on Time series Forecasting at NIT Srinagar \n
+- 26-02-2017 : 	Finisher, IDBI Federal Life Insurance New Delhi Half Marathon in 124 minutes \n
+- xx-04-2016 : 	Poster Paper got accepted in e-Energy 2016 \n
+- xx-01-2016 :	Presenter work on anomaly detection in yearly evaluation at ITRA meeting, Bangalore \n
+- 29-11-2015 :	Finisher, [https://imgur.com/xqj1MPx Airtel Delhi Half-Marathon] \n
+- 20-11-2015 :	Volunteer, Workshop on Ubiquitous Sensing for Effective Living at IIIT-D \n
+- 28-10-2015 :	Participant, I-CARE 2015, IBM Delhi, Winter school on Cognitive computing \n
+- 09-10-2015 :	Visit to TCS Innovation Labs Delhi \n
+- 17-07-2015 :	Talk on Linked data at TCS Innovation Labs Bangalore \n
+- 15-06-2015 :	Participant, MSR India, Summer School on Machine Learning. \n
+- 27-11-2014 :	Received TCS Research Fellowship (Cycle 9)
