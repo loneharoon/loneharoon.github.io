@@ -1,6 +1,10 @@
 # jemdoc: menu{MENU}{index.html}
+# jemdoc: title{Haroon Rashid}
+# jemdoc: {{<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />}}
 
 = Haroon Rashid
+
+
 
 ~~~
 {}{img_left}{files/pic-haroon.jpeg}{alt text}{200px}{250px}{IMGLINKTARGET}
