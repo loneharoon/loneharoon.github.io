@@ -7,10 +7,17 @@
 - Machine Learning
 
 = Publications
-- H. Rashid, P. Singh, "Monitor: An abnormality detection approach in buildings energy consumption", Proceedings of the 10th Annual ACM India Conference, COMPUTE, 2017. [files/compute_2017_paper.pdf \[PDF\]]
-- H. Rashid, P. M. Mammen, S. Singh, K. Ramamritham, P. Singh, P. Shenoy, "Want to reduce Energy Consumption? Don’t depend on the Customers!", 4th ACM International Conference on Systems for Energy-Efficient Built Environments, BuildSys, 2017. [files/buildsys_2017_survey_paper.pdf \[PDF\]]
-- H. Rashid, P. Singh, K. Ramamritham, "Revisiting selection of residential consumers for demand response programs", 4th ACM International Conference on Systems for Energy-Efficient Built Environments, BuildSys, 2017. [files/buildsys_2017_consistency_paper.pdf \[PDF\]]
+- H. Rashid, P. Singh, "Monitor: An abnormality detection approach in buildings energy consumption", Proceedings of the 10th Annual ACM India Conference, COMPUTE, 2017. [files/compute_2017_paper.pdf \[PDF\]][files/slides_Monitor_paper_Compute17.pdf \[Slides\]]
+- H. Rashid, P. M. Mammen, S. Singh, K. Ramamritham, P. Singh, P. Shenoy, "Want to reduce Energy Consumption? Don’t depend on the Customers!", 4th ACM International Conference on Systems for Energy-Efficient Built Environments, BuildSys, 2017. [files/buildsys_2017_survey_paper.pdf \[PDF\]][files/slides_survey_paper_BuildSys17.pdf \[Slides\]]
+- H. Rashid, P. Singh, K. Ramamritham, "Revisiting selection of residential consumers for demand response programs", 4th ACM International Conference on Systems for Energy-Efficient Built Environments, BuildSys, 2017. [files/buildsys_2017_consistency_paper.pdf \[PDF\]][files/slides_consistency_paper_BuildySys17.pdf \[Slides\]]
 - H. Rashid, P. Singh, "Poster: Energy Disaggregation for identifying anomalous appliance", 4th ACM International Conference on Systems for Energy-Efficient Built Environments, BuildSys, 2017. [files/buildsys_2017_poster.pdf \[PDF\]]
-- H. Rashid, P. Arjunan, P. Singh, A. Singh, "Collect, Compare, and Score: A Generic Data-driven Anomaly Detection Method for Buildings", Proceedings of the Seventh International Conference on Future Energy Systems Poster Sessions, eEnergy , 2016. [files/e-energy_2016_CCS_paper.pdf \[PDF\]]
-- H. Rashid, A. K. Turuk, "[https://arxiv.org/abs/1504.06797 Dead Reckoning Localization Technique for Mobile Wireless Sensor Networks]", IET - Wireless Sensor Systems, 2014. 
-- H. Rashid, A. K. Turuk, "[http://rdcu.be/wLUw Localization of Wireless Sensor Networks Using a Single Anchor Node]", Wireless Personal communications - Springer, 72(2), 2013.
+- H. Rashid, P. Arjunan, P. Singh, A. Singh, "Collect, Compare, and Score: A Generic Data-driven Anomaly Detection Method for Buildings", Proceedings of the Seventh International Conference on Future Energy Systems Poster Sessions, eEnergy , 2016. [files/e-energy_2016_CCS_paper.pdf \[PDF\]] [files/poster_eEnergy_2016.pdf \[Poster\]]
+- H. Rashid, A. K. Turuk, "[https://arxiv.org/abs/1504.06797 Dead Reckoning Localization Technique for Mobile Wireless Sensor Networks]", IET - Wireless Sensor Systems, 2014. [files/DRLMSN.pdf \[PDF\]]
+- H. Rashid, A. K. Turuk, "[http://rdcu.be/wLUw Localization of Wireless Sensor Networks Using a Single Anchor Node]", Wireless Personal communications - Springer, 72(2), 2013. [files/LUSA.pdf \[PDF\]]
+
+= Talks
+- 09-11-2017 : BuildSys 2017 [files/slides_survey_paper_BuildSys17.pdf \[Talk 1\]][files/slides_consistency_paper_BuildySys17.pdf \[Talk 2\]]
+- 23-09-2017 : Doctoral Symposium at NIIT University, Rajasthan
+- 15-03-2017 : Invited talk at NIT Srinagar, [https://goo.gl/o7FMVu Slides] 
+- 21-07-2016 : ITRA project meeting at IIIT Hyderabad. Also, presented a [files/poster_ITRA_2016.pdf poster]
+- 10-01-2016 : ITRA project meeting at Bangalore. Also, presented a [files/poster_ITRA2016jan.pdf poster] 
