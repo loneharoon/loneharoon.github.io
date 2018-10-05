@@ -1,23 +1,31 @@
 # jemdoc: menu{MENU}{index.html}
 # jemdoc: title{Haroon Rashid}
 
-= Haroon Rashid
+\n
+= Haroon Rashid Lone
 
 ~~~
-{}{img_left}{files/img_haroon.jpg}{alt text}{200px}{250px}{IMGLINKTARGET}
+{}{img_left}{files/pic-haroon2018.png}{alt text}{200px}{230px}{IMGLINKTARGET}
 Ph.D. Student \n
 Email id: [haroonr@iiitd.ac.in] \n
 [https://www.iiitd.ac.in/ Indraprastha Institute of Information Technology (IIIT) - Delhi]  \n
 Okhla Industrial Estate, Phase-III, New Delhi \n
 Delhi, India - 110020 \n
+
+
+ *[files/cv_Haroon_short.pdf CV] (Updated on Oct. 5, 2018)*  \n
+ * [https://www.github.com/loneharoon GitHub] *
 ~~~
 
-I am a Ph.D. student in the Computer Science and Engineering department of IIIT - Delhi, India. I work with  [https://www.pushpendrasingh.org/ Prof. Singh] on energy sustainability within smart buildings. Specifically, our work is to detect energy wastage instances and to provide novel solutions to such problems.
+I am a Ph.D. student in the Computer Science and Engineering department of IIIT - Delhi, India. I work with  [https://www.pushpendrasingh.org/ Prof. Singh] on energy sustainability. Specifically, our work is to detect energy wastage instances and to provide novel solutions to such problems.
 
 Prior to joining Ph.D., I did my masters from National Institute of Technology Rourkela, India. During masters, I worked with [http://www.nitrkl.ac.in/CS/~akturuk/ Prof. Turuk], and the focus of our work was to localize sensor nodes both in static as well as in mobile scenarios.
 
-= Research Experience
+= Research Interests
 
+Energy sustainability, Applied Machine Learning, Data Mining
+
+= Research Experience
 ~~~
 {}{table}{TABLENAME}
 Position  | Place  | Duration ||

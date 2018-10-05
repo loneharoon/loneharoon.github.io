@@ -1,5 +1,5 @@
 # jemdoc: menu{MENU}{links.html}
-
+\n
 = Outlier Analysis
 . Tutorials: [https://www.siam.org/meetings/sdm11/clustering.pdf Multiple Clustering Solutions]; [http://videolectures.net/ecmlpkdd08_lazarevic_dmfa/ Data Mining for Anomaly Detection]; [https://www.siam.org/meetings/sdm10/tutorial3.pdf Outlier Detection Techniques]; [http://www.outlier-analytics.org/odd13kdd/papers/slides_charu_aggarwal.pdf Outlier Ensembles]; [http://www3.cs.stonybrook.edu/~leman/wsdm13/ Anomaly Detection]; [http://www.cs.kumamoto-u.ac.jp/~yasuko/TALKS/15-SIGMOD-tut/ Mining and Forecasting]; [http://www.cs.waikato.ac.nz/~abifet/PAKDD2011/ Concept Drift]
 . Workshops: KDD - Outlier Detection and Description [http://outlier-analytics.org/odd13kdd/ 2013], [http://outlier-analytics.org/odd14kdd/ 2014], [http://outlier-analytics.org/odd15kdd/ 2015]; [http://www-bcf.usc.edu/~liu32/milets/ Learning from Time Series]
