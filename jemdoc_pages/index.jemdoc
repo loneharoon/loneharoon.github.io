@@ -13,9 +13,12 @@ Okhla Industrial Estate, Phase-III, New Delhi \n
 Delhi, India - 110020 \n
 
 
- *[files/cv_Haroon_short.pdf CV] (Updated on Oct. 25, 2018)*  \n
+ *[files/cv_Haroon_short.pdf CV] (Updated on Jan. 20, 2019)*  \n
  * [https://www.github.com/loneharoon GitHub] *
+ 
 ~~~
+
+{{<font color =  red size=+2.5><b>}}* Looking for a Postdoc position *{{</b></font>}}
 
 I am a Ph.D. student in the Computer Science and Engineering department of IIIT - Delhi, India. I work with  [https://www.pushpendrasingh.org/ Prof. Singh]. Our work proposes automated approaches for detecting energy wastage instances in buildings. Towards this, we use temporal data collected from smart meters. These meters are used both for billing purposes and allow real-time communication and control. We use Data Mining approaches to understand the hidden knowledge in the temporal data, and Machine Learning to propose novel solutions.
 
