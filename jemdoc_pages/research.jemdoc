@@ -1,6 +1,7 @@
 # jemdoc: menu{MENU}{research.html}
 \n
 = Publications
+- H. Rashid, P. Singh, V. Stankovic, L. Stankovic. "Can non-intrusive load monitoring be used for identifying an appliance’s anomalous behaviour?" Applied Energy, Elsevier, 2019 [files/papers/appliedEnergy19.pdf \[PDF\]]
 - H. Rashid, P. Singh, A. Singh. "I-BLEND, a campus scale commercial and residential buildings electrical energy dataset," Scientific Reports Nature, 2018.
 - H. Rashid, P. Singh, "Monitor: An Abnormality Detection Approach in Buildings Energy Consumption", 4th IEEE International Conference on Collaboration and Internet Computing, IEEE-CIC, Philadelphia, USA, 2018. [files/monitor.pdf \[PDF\]] [files/presentations/slides_IEEE_CIC.pdf \[Slides\]]
 - H. Rashid, N. Batra, P. Singh, "Rimor: Towards identifying anomalous appliances in buildings", 5th ACM International Conference on Systems for Energy-Efficient Built Environments, ACM-BuildSys, Shenzen, China, 2018. [files/rimor.pdf \[PDF\]]  [files/presentations/slides_buildsys18.pdf \[Slides\]]
