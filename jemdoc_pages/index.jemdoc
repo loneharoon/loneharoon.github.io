@@ -18,7 +18,7 @@ Delhi, India - 110020 \n
  
 ~~~
 
-{{<font color =  red size=+2.5><b>}}* Looking for a Postdoc position *{{</b></font>}}
+#{{<font color =  red size=+2.5><b>}}* Looking for a Postdoc position *{{</b></font>}}
 
 I am a Ph.D. student in the Computer Science and Engineering department of IIIT - Delhi, India. I work with  [https://www.pushpendrasingh.org/ Prof. Singh]. Our work proposes automated approaches for detecting energy wastage instances in buildings. Towards this, we use temporal data collected from smart meters. These meters are used both for billing purposes and allow real-time communication and control. We use Data Mining approaches to understand the hidden knowledge in the temporal data, and Machine Learning to propose novel solutions.
 
@@ -43,7 +43,7 @@ Visiting researcher | IIT Bombay, India | Oct'16 - Dec'16
 = News
 - xx-02-2019 :  Our paper got accepted in IEEE ICASSP \n
 - xx-01-2019 :  Our paper got accepted in Applied Energy - Elsevier \n
-- 06-01-2019 :  Finished a half-marathon of 23 Km in 140 minutes \n
+- 06-01-2019 :  Finished a half-marathon of [files/figures/halfmarathon2019.png 23 Km in 140 minutes] \n
 - xx-12-2018 :  Our paper got accepted in Scientific Reports - Nature \n
 - xx-09-2018 :  Our paper got accepted in IEEE CIC 2018 \n
 - xx-09-2018 :  Received travel grant for Buildsys from Microsoft India \n
