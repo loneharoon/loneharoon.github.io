@@ -6,11 +6,11 @@
 
 ~~~
 {}{img_left}{files/pic-haroon2018.png}{alt text}{200px}{230px}{IMGLINKTARGET}
-Ph.D. Student \n
-Email id: [haroonr@iiitd.ac.in] \n
-[https://www.iiitd.ac.in/ Indraprastha Institute of Information Technology (IIIT) - Delhi]  \n
-Okhla Industrial Estate, Phase-III, New Delhi \n
-Delhi, India - 110020 \n
+Postdoc  \n
+Link Lab, Olsson Hall\n
+University of Virginia \n
+Charlottesville, VA -22904 \n
+Email id: [hl7ck@virginia.edu] \n
 
 
  *[files/cv_Haroon_short.pdf CV] (Updated on Jan. 20, 2019)*  \n
@@ -20,27 +20,36 @@ Delhi, India - 110020 \n
 
 #{{<font color =  red size=+2.5><b>}}* Looking for a Postdoc position *{{</b></font>}}
 
-I am a Ph.D. student in the Computer Science and Engineering department of IIIT - Delhi, India. I work with  [https://www.pushpendrasingh.org/ Prof. Singh]. Our work proposes automated approaches for detecting energy wastage instances in buildings. Towards this, we use temporal data collected from smart meters. These meters are used both for billing purposes and allow real-time communication and control. We use Data Mining approaches to understand the hidden knowledge in the temporal data, and Machine Learning to propose novel solutions.
+I am a Postdoc in the Department of Engineering Systems at the University of Virginia. I work with [https://engineering.virginia.edu/faculty/laura-barnes Laura Barnes] in leveraging the potential of smart phones and wearables for smart health.   
+
+I did my Ph.D. in Computer Science from IIIT-Delhi under 
+[https://www.pushpendrasingh.org/ Pushpendra Singh]. The focus of our work was to detect energy wastage instances in buildings first and then identify/localize the appliance causing the energy wastage. Towards this, we used temporal data collected from smart meters installed at the building's main line. 
+
+
+Before Ph.D., I did masters from National Institute of Technology Rourkela, India. During masters, I worked with [http://www.nitrkl.ac.in/CS/~akturuk/ Ashok Kumar Turuk], and the focus of our work was to localize sensor nodes both in static as well as in mobile scenarios.
 
 
 
-Prior to joining Ph.D., I did my masters from National Institute of Technology Rourkela, India. During masters, I worked with [http://www.nitrkl.ac.in/CS/~akturuk/ Prof. Turuk], and the focus of our work was to localize sensor nodes both in static as well as in mobile scenarios.
 
 = Research Interests
 
-Data Mining, Applied Machine Learning, Energy sustainability
+Smart Health, Energy Sustainability,
+Data Mining, Applied Machine Learning
 
 = Research Experience
 ~~~
 {}{table}{TABLENAME}
 Position  | Place  | Duration ||
-PhD scholar | IIIT Delhi, India | 2014 - present   ||
+Postdoc | University of Virginia, USA | May'19 - present   ||
+PhD scholar | IIIT Delhi, India | 2014 - 2018   ||
 Visiting researcher | Univeristy of Strathclyde, UK | Nov'17 - April'18   ||
 Visiting researcher | IIT Bombay, India | Oct'16 - Dec'16   
 ~~~
 
 
 = News
+- xx-05-2019 :  I joined Postdoc position at the UVA \n
+- 18-03-2019 :  I defended my PhD work :) \n
 - xx-02-2019 :  Our paper got accepted in IEEE ICASSP \n
 - xx-01-2019 :  Our paper got accepted in Applied Energy - Elsevier \n
 - 06-01-2019 :  Finished a half-marathon of [files/figures/halfmarathon2019.png 23 Km in 140 minutes] \n
