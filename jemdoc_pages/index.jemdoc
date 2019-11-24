@@ -7,34 +7,28 @@
 ~~~
 {}{img_left}{files/pic-haroon2018.png}{alt text}{200px}{230px}{IMGLINKTARGET}
 Postdoc  \n
-Link Lab, Olsson Hall\n
+[https://engineering.virginia.edu/link-lab-0 Link Lab], Olsson Hall\n
 University of Virginia \n
 Charlottesville, VA -22904 \n
 Email id: [hl7ck@virginia.edu] \n
 
 
- *[files/cv_Haroon_short.pdf CV] (Updated on Jan. 20, 2019)*  \n
+ *[files/cv_Haroon_short.pdf CV] (Updated on Nov. 20, 2019)*  \n
  * [https://www.github.com/loneharoon GitHub] *
  
 ~~~
 
 #{{<font color =  red size=+2.5><b>}}* Looking for a Postdoc pos *{{</b></font>}}
 
-I am a Postdoc in the Department of Engineering Systems at the University of Virginia. I work with [https://engineering.virginia.edu/faculty/laura-barnes Laura Barnes] in leveraging the potential of smart phones and wearables for smart health.   
+I am a Postdoc in the Department of Engineering Systems at the University of Virginia. My research is primarily in the areas of the Internet of Things (IoT), Energy Sustainability, and Smart Healthcare. My research approach is to deploy sensors, collect & analyse data, and build models by using machine learning and data science approaches.  
 
-I did my Ph.D. in Computer Science from IIIT-Delhi under 
-[https://www.pushpendrasingh.org/ Pushpendra Singh]. The focus of our work was to detect energy wastage instances in buildings first and then identify/localize the appliance causing the energy wastage. Towards this, we used temporal data collected from smart meters installed at the building's main line. 
-
-
-Before Ph.D., I did masters from National Institute of Technology Rourkela, India. During masters, I worked with [http://www.nitrkl.ac.in/CS/~akturuk/ Ashok Kumar Turuk], and the focus of our work was to localize sensor nodes both in static as well as in mobile scenarios.
-
-
+Currently, I work with [https://engineering.virginia.edu/faculty/laura-barnes Laura Barnes] in leveraging the potential of smartphones and wearables for smart healthcare. Before this, I did my Ph.D. in Computer Science from IIIT-Delhi under [https://www.pushpendrasingh.org/ Pushpendra Singh]. The focus of our work was to detect energy wastage instances in buildings first and then identify/localize the appliance causing the energy wastage. Towards this, we used temporal data collected from smart meters installed in the buildings. During Ph.D., I was fortunate to work for a significant duration with [https://sites.google.com/site/ramamrithamkrithi/home Krithi Ramamritham] at IIT Bombay, [https://www.strath.ac.uk/staff/stankovicvladimirdr/ Vladimir Stankovic] and [https://www.strath.ac.uk/staff/stankoviclinadr/ Lina Stankovic] at the University of Strathclyde, UK. Before Ph.D., I did master's from the National Institute of Technology Rourkela, India. During master's, I worked with [http://www.nitrkl.ac.in/CS/~akturuk/ Ashok Kumar Turuk], and the focus of our work was to localize sensor nodes both in static as well as in mobile scenarios.
 
 
 = Research Interests
 
-Smart Health, Energy Sustainability,
-Data Mining, Applied Machine Learning
+Internet of Things (IoT), Smart Healthcare, Energy Sustainability,
+ Machine Learning, Data science
 
 = Research Experience
 ~~~
