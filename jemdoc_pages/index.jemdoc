@@ -6,14 +6,14 @@
 
 ~~~
 {}{img_left}{files/pic-haroon2018.png}{alt text}{200px}{230px}{IMGLINKTARGET}
-Postdoc  \n
-[https://engineering.virginia.edu/link-lab-0 Link Lab], Olsson Hall\n
-University of Virginia \n
-Charlottesville, VA -22904 \n
-Email id: [hl7ck@virginia.edu] \n
+Visiting Assistant Professor  \n
+Department of Computer Science, A&S Building\n
+University of South Dakota \n
+Vermillion, SD - 57069 \n
+Email id: [haroon.lone@usd.edu] \n
 
 
- *[files/cv_Haroon_short.pdf CV] (Updated on Jan. 10, 2020)*  \n
+ *[files/cv_Haroon_short.pdf CV] (Updated on Nov. 8, 2020)*  \n
  *[https://scholar.google.co.in/citations?user=OjujmUAAAAAJ&hl=en Google Scholar]* \n
  *[https://www.github.com/loneharoon GitHub] *
 
@@ -22,23 +22,25 @@ Email id: [hl7ck@virginia.edu] \n
 
 #{{<font color =  red size=+2.5><b>}}* Looking for a Postdoc pos *{{</b></font>}}
 
-I am a Postdoc in the Department of Engineering Systems at the University of Virginia. My research is primarily in the areas of the Internet-of-Things (IoT), Energy Sustainability, and Smart Healthcare. My research approach is to deploy sensors, collect & analyse data, and build models by using machine learning and data science approaches.  
+I am a Visiting Assistant Professor in the Department of Computer Science at the University of South Dakota. My research is primarily in the areas of the Internet-of-Things (IoT) and applied Machine Learning.  My research approach is to deploy sensors, collect & analyze data, and build models using machine learning and data science approaches. Currently, I am focusing on Energy Sustainability and Smart Healthcare domains.
 
-Currently, I work with [https://engineering.virginia.edu/faculty/laura-barnes Laura Barnes] in leveraging the potential of smartphones and wearables for identifying the digital biomarkers for the detection of mental health issues in college students. This work is in collaboration with the Psychology and Environment departments of the UVA. 
+
+Before this, I was a Postdoc in the Department of Engineering Systems at the University of Virginia. I worked with [https://engineering.virginia.edu/faculty/laura-barnes Laura Barnes]  in leveraging wearables for identifying the digital biomarkers of mental health. This work was in collaboration with the Psychology and Environment departments of the UVA. 
+
 
 Before Postdoc, I did my Ph.D. in Computer Science from IIIT-Delhi under [https://www.pushpendrasingh.org/ Pushpendra Singh]. The focus of our work was to detect energy wastage instances in buildings first and then identify/localize the appliance causing the energy wastage. Towards this, we used temporal data collected from smart meters installed in the buildings. During Ph.D., I was fortunate to work for a significant duration with [https://sites.google.com/site/ramamrithamkrithi/home Krithi Ramamritham] at IIT Bombay, [https://www.strath.ac.uk/staff/stankovicvladimirdr/ Vladimir Stankovic] and [https://www.strath.ac.uk/staff/stankoviclinadr/ Lina Stankovic] at the University of Strathclyde, UK. Before Ph.D., I did master's from the National Institute of Technology Rourkela, India. During master's, I worked with [http://www.nitrkl.ac.in/CS/~akturuk/ Ashok Kumar Turuk], and the focus of our work was to localize sensor nodes both in static as well as in mobile scenarios while using the minimum number of beacon nodes.
 
 
 = Research Interests
 
-Internet of Things (IoT), Smart Healthcare, Energy Sustainability,
- Machine Learning, Data science
+Internet of Things (IoT), Machine Learning, Data science, Smart Healthcare, Energy Sustainability
 
 = Research Experience
 ~~~
 {}{table}{TABLENAME}
 Position  | Place  | Duration ||
-Postdoc | University of Virginia, USA | May'19 - present   ||
+Visiting Asst. Prof. | University of South Dakota, USA | Aug'20 -  Present ||
+Postdoc | University of Virginia, USA | May'19 - Aug'20   ||
 PhD scholar | IIIT Delhi, India | 2014 - 2018   ||
 Visiting researcher | Univeristy of Strathclyde, UK | Nov'17 - April'18   ||
 Visiting researcher | IIT Bombay, India | Oct'16 - Dec'16   
@@ -46,8 +48,10 @@ Visiting researcher | IIT Bombay, India | Oct'16 - Dec'16
 
 
 = News
-- xx-05-2019 :  I joined Postdoc position at the UVA \n
-- 18-03-2019 :  I defended my PhD work :) \n
+- xx-08-2020 : Joined University of South Dakota as a Visiting Assistant Professor \n
+- xx-07-2020 :  Our paper got accepted at ACM, IMWUT \n
+- xx-05-2019 :  Joined Postdoc position at the UVA \n
+- 18-03-2019 :  Defended my PhD work :) \n
 - xx-02-2019 :  Our paper got accepted in IEEE ICASSP \n
 - xx-01-2019 :  Our paper got accepted in Applied Energy - Elsevier \n
 - 06-01-2019 :  Finished a half-marathon of [files/figures/halfmarathon2019.png 23 Km in 140 minutes] \n
