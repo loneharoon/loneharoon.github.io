@@ -5,24 +5,26 @@ Following graph shows my running stats. Reported time and distance are taken fro
 {}{raw}
 <html lang="en">
 <head>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-   <script src="https://code.highcharts.com/highcharts.js"></script>
-   <script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://www.googleapis.com/auth/spreadsheets.readonly"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 
 <body>
 <div id="container" style="width: 1000px" ></div>
 <script language="JavaScript">
-$(function() {
-  $('#container').highcharts({
-    chart: {
-      zoomType: 'xy'
-    },
+
+Highcharts.chart('container', {
+
     title: {
-      text: ''
+        text: ' '
     },
     data: {
-      googleSpreadsheetKey: '1-x0EoOrLUtrz0SpiFMo1EdHVYD90eSztuI5KTrBLAQE'
+        googleAPIKey: 'AIzaSyCeHh09mlbfQR4JhuG-yYTblR9O1WYj4x4',
+        googleSpreadsheetKey: '159ANqIowVWAfuJZRo8WvhLbNwrnVKH7MHJwDIW2-beE',
+        error: console.error
     },
     yAxis: [{ // Primary yAxis
       labels: {
@@ -37,7 +39,7 @@ $(function() {
           color: Highcharts.getOptions().colors[1]
         }
       }
-    }, { // Secondary yAxis
+    }, { // Secondary yAxis 
       title: {
         text: 'Distance (Km)',
         style: {
@@ -52,15 +54,14 @@ $(function() {
       },
       opposite: true
     }],
-    tooltip: {
-      shared: true
-    },
-    series: [{
+      series: [{
       name: 'Time',
       type: 'column',
       yAxis: 1,
       data: {
-        googleSpreadsheetKey: '1-x0EoOrLUtrz0SpiFMo1EdHVYD90eSztuI5KTrBLAQE',
+        googleAPIKey: 'AIzaSyCeHh09mlbfQR4JhuG-yYTblR9O1WYj4x4',
+        googleSpreadsheetKey: '159ANqIowVWAfuJZRo8WvhLbNwrnVKH7MHJwDIW2-beE',
+        googleSpreadsheetWorksheet: 'Sheet1',
         columns: ['Date', 'Distance']
       },
       tooltip: {
@@ -71,7 +72,9 @@ $(function() {
       type: 'spline',
       yaxis: 2,
       data: {
-        googleSpreadsheetKey: '1-x0EoOrLUtrz0SpiFMo1EdHVYD90eSztuI5KTrBLAQE',
+        googleAPIKey: 'AIzaSyCeHh09mlbfQR4JhuG-yYTblR9O1WYj4x4',
+        googleSpreadsheetKey: '159ANqIowVWAfuJZRo8WvhLbNwrnVKH7MHJwDIW2-beE',
+        googleSpreadsheetWorksheet: 'Sheet1',
         columns: ['Date', 'Distance']
       },
       tooltip: {
@@ -87,8 +90,11 @@ $(function() {
       floating: true,
       backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
     },
-  });
+
+
 });
+
+
 
 </script>
 </body>
