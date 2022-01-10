@@ -1,6 +1,6 @@
 # jemdoc:  menu{MENU}{running.html}
 \n
-Following graph shows my running stats. Reported time and distance are taken from a dumb wrist watch and smart Google Maps respectively.
+Following graphs shows my running stats. Reported times and distances are taken from a dumb wrist watch and smart Google Maps respectively.
 ~~~
 {}{raw}
 <html lang="en">
@@ -13,18 +13,22 @@ Following graph shows my running stats. Reported time and distance are taken fro
 </head>
 
 <body>
-<div id="container" style="width: 1000px" ></div>
+<div id="container1" style="width: 1000px" ></div>
+<div id="container2" style="width: 1000px" ></div>
+<div id="container3" style="width: 1000px" ></div>
 <script language="JavaScript">
 
-Highcharts.chart('container', {
+let chart1 = Highcharts.chart('container1', {
 
     title: {
-        text: ' '
+        text: 'Distance covered and time taken for each run since January 2016'
     },
     data: {
         googleAPIKey: 'AIzaSyCeHh09mlbfQR4JhuG-yYTblR9O1WYj4x4',
         googleSpreadsheetKey: '159ANqIowVWAfuJZRo8WvhLbNwrnVKH7MHJwDIW2-beE',
-        error: console.error
+        error: console.error,
+        startColumn: 0,
+        endColumn: 2,
     },
     yAxis: [{ // Primary yAxis
       labels: {
@@ -62,7 +66,9 @@ Highcharts.chart('container', {
         googleAPIKey: 'AIzaSyCeHh09mlbfQR4JhuG-yYTblR9O1WYj4x4',
         googleSpreadsheetKey: '159ANqIowVWAfuJZRo8WvhLbNwrnVKH7MHJwDIW2-beE',
         googleSpreadsheetWorksheet: 'Sheet1',
-        columns: ['Date', 'Distance']
+        columns: ['Date', 'Distance'],
+        startColumn: 0,
+        endColumn: 2,
       },
       tooltip: {
         valueSuffix: 'Km'
@@ -75,6 +81,8 @@ Highcharts.chart('container', {
         googleAPIKey: 'AIzaSyCeHh09mlbfQR4JhuG-yYTblR9O1WYj4x4',
         googleSpreadsheetKey: '159ANqIowVWAfuJZRo8WvhLbNwrnVKH7MHJwDIW2-beE',
         googleSpreadsheetWorksheet: 'Sheet1',
+        startColumn: 0,
+        endColumn: 2,
         columns: ['Date', 'Distance']
       },
       tooltip: {
@@ -94,6 +102,83 @@ Highcharts.chart('container', {
 
 });
 
+
+let chart2 = Highcharts.chart('container2', {
+
+    title: {
+        text: 'Bar chart showing distances ran year wise'
+    },
+    chart: {
+        type: 'column'
+    },
+    xAxis: {
+        min: 2015,
+        title: {
+            text: 'Year'
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Distance(Km)'
+        }
+    },
+    data: {
+        googleAPIKey: 'AIzaSyCeHh09mlbfQR4JhuG-yYTblR9O1WYj4x4',
+        googleSpreadsheetRange: 'Pivot Table 1',
+        googleSpreadsheetKey: '159ANqIowVWAfuJZRo8WvhLbNwrnVKH7MHJwDIW2-beE',
+        name:''
+      },
+    legend: {
+      layout: 'vertical',
+      align: 'left',
+      x: 120,
+      verticalAlign: 'top',
+      y: 100,
+      floating: true,
+      backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+      enabled: false
+          } 
+});
+
+
+let chart3 =Highcharts.chart('container3', {
+
+    title: {
+        text: 'Pie chart showing the percentage distances ran at different places'
+    },
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    data: {
+        googleAPIKey: 'AIzaSyCeHh09mlbfQR4JhuG-yYTblR9O1WYj4x4',
+        googleSpreadsheetRange: 'Pivot Table 2',
+        googleSpreadsheetKey: '159ANqIowVWAfuJZRo8WvhLbNwrnVKH7MHJwDIW2-beE',
+        name:''
+      },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            }
+        }
+    },   
+
+});
 
 
 </script>
