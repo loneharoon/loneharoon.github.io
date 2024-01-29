@@ -10,7 +10,7 @@ For compiling pages:
  3. see in outside folder the update files. :)
  4. source deactivate for quiting py27
 
- Recently, there was some issue during compilation. So, I installed phython 3 compatible as mentioned [http://yangfeng.hosting.nyu.edu/post/using-jemdoc-with-python-3-and-new-mac-os/ here]. using this script the updated procedure is, 
+ Recently, there was some issue during compilation. So, I installed python 3 compatible as mentioned [http://yangfeng.hosting.nyu.edu/post/using-jemdoc-with-python-3-and-new-mac-os/ here]. using this script the updated procedure is, 
   1. Move to jemdoc_pages folder
-  2. Run Jemdoc -o ../ pagename.jemdoc
+  2. Run jemdoc -o  ../ <space> pagename.jemdoc
  
