@@ -11,45 +11,76 @@ const failures = [];
 
 const packageJson = JSON.parse(read("package.json"));
 const scripts = packageJson.scripts || {};
-for (const forbiddenScript of ["build:css", "build:tailwind", "build:tailwind:watch"]) {
+for (const forbiddenScript of [
+  "build:css",
+  "build:tailwind",
+  "build:tailwind:watch",
+]) {
   if (Object.prototype.hasOwnProperty.call(scripts, forbiddenScript)) {
-    failures.push(`Starter package.json must not define \`${forbiddenScript}\`; build ownership belongs to gem repos.`);
+    failures.push(
+      `Starter package.json must not define \`${forbiddenScript}\`; build ownership belongs to gem repos.`,
+    );
   }
 }
 
 const config = read("_config.yml");
 if (!/^\s*theme:\s*al_folio_core\s*$/m.test(config)) {
-  failures.push("`_config.yml` must keep `theme: al_folio_core` for thin-starter wiring.");
+  failures.push(
+    "`_config.yml` must keep `theme: al_folio_core` for thin-starter wiring.",
+  );
 }
 if (!/^\s*-\s*al_folio_core\s*$/m.test(config)) {
   failures.push("`_config.yml` plugins must include `al_folio_core`.");
 }
 if (!/^\s*-\s*al_folio_distill\s*$/m.test(config)) {
-  failures.push("`_config.yml` plugins must include `al_folio_distill` (distill is plugin-owned).");
+  failures.push(
+    "`_config.yml` plugins must include `al_folio_distill` (distill is plugin-owned).",
+  );
 }
 if (!/^\s*-\s*al_cookie\s*$/m.test(config)) {
-  failures.push("`_config.yml` plugins must include `al_cookie` (cookie consent is plugin-owned).");
+  failures.push(
+    "`_config.yml` plugins must include `al_cookie` (cookie consent is plugin-owned).",
+  );
 }
 if (!/^\s*-\s*al_icons\s*$/m.test(config)) {
-  failures.push("`_config.yml` plugins must include `al_icons` (icon runtime is plugin-owned).");
+  failures.push(
+    "`_config.yml` plugins must include `al_icons` (icon runtime is plugin-owned).",
+  );
 }
 if (!/^\s*-\s*al_math\s*$/m.test(config)) {
-  failures.push("`_config.yml` plugins must include `al_math` when math features are enabled.");
+  failures.push(
+    "`_config.yml` plugins must include `al_math` when math features are enabled.",
+  );
 }
 
 for (const libraryKey of ["fontawesome", "academicons", "scholar-icons"]) {
-  if (!new RegExp(`^\\s{2}${escapeRegExp(libraryKey)}:\\s*$`, "m").test(config)) {
-    failures.push(`\`_config.yml\` must define \`third_party_libraries.${libraryKey}\` for al_icons runtime wiring.`);
+  if (
+    !new RegExp(`^\\s{2}${escapeRegExp(libraryKey)}:\\s*$`, "m").test(config)
+  ) {
+    failures.push(
+      `\`_config.yml\` must define \`third_party_libraries.${libraryKey}\` for al_icons runtime wiring.`,
+    );
     continue;
   }
-  if (!new RegExp(`^\\s{2}${escapeRegExp(libraryKey)}:[\\s\\S]*?^\\s{4}integrity:\\s*$[\\s\\S]*?^\\s{6}css:\\s*\"sha`, "m").test(config)) {
-    failures.push(`\`_config.yml\` should define an SRI hash for \`third_party_libraries.${libraryKey}.integrity.css\`.`);
+  if (
+    !new RegExp(
+      `^\\s{2}${escapeRegExp(libraryKey)}:[\\s\\S]*?^\\s{4}integrity:\\s*$[\\s\\S]*?^\\s{6}css:\\s*\"sha`,
+      "m",
+    ).test(config)
+  ) {
+    failures.push(
+      `\`_config.yml\` should define an SRI hash for \`third_party_libraries.${libraryKey}.integrity.css\`.`,
+    );
   }
 }
 
 for (const libraryKey of ["tikzjax", "tocbot"]) {
-  if (!new RegExp(`^\\s{2}${escapeRegExp(libraryKey)}:\\s*$`, "m").test(config)) {
-    failures.push(`\`_config.yml\` must define \`third_party_libraries.${libraryKey}\` for v1 runtime contracts.`);
+  if (
+    !new RegExp(`^\\s{2}${escapeRegExp(libraryKey)}:\\s*$`, "m").test(config)
+  ) {
+    failures.push(
+      `\`_config.yml\` must define \`third_party_libraries.${libraryKey}\` for v1 runtime contracts.`,
+    );
   }
 }
 
@@ -58,12 +89,24 @@ if (!/gem 'al_math', '= 1\.0\.1'/.test(gemfile)) {
   failures.push("`Gemfile` should pin `al_math` to released version `1.0.1`.");
 }
 if (/gem 'al_math',\s*:git =>/.test(gemfile)) {
-  failures.push("`Gemfile` must not use git-branch pin for `al_math`; use released gem version.");
+  failures.push(
+    "`Gemfile` must not use git-branch pin for `al_math`; use released gem version.",
+  );
 }
 
-for (const forbiddenPath of ["_includes", "_layouts", "_sass", "_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
+for (const forbiddenPath of [
+  "_includes",
+  "_layouts",
+  "_sass",
+  "_scripts",
+  "assets/tailwind",
+  "tailwind.config.js",
+  "assets/webfonts",
+]) {
   if (exists(forbiddenPath)) {
-    failures.push(`Starter must not own core component path \`${forbiddenPath}\`; move ownership to the corresponding gem.`);
+    failures.push(
+      `Starter must not own core component path \`${forbiddenPath}\`; move ownership to the corresponding gem.`,
+    );
   }
 }
 
@@ -74,13 +117,21 @@ for (const forbiddenGlobPath of [
   "assets/fonts/scholar-icons.ttf",
 ]) {
   if (exists(forbiddenGlobPath)) {
-    failures.push(`Starter must not own icon runtime artifact \`${forbiddenGlobPath}\`; icon ownership belongs to al_icons.`);
+    failures.push(
+      `Starter must not own icon runtime artifact \`${forbiddenGlobPath}\`; icon ownership belongs to al_icons.`,
+    );
   }
 }
 
-for (const requiredPath of ["test/visual", "test/integration_plugin_toggles.sh", "test/integration_distill.sh"]) {
+for (const requiredPath of [
+  "test/visual",
+  "test/integration_plugin_toggles.sh",
+  "test/integration_distill.sh",
+]) {
   if (!exists(requiredPath)) {
-    failures.push(`Starter integration/visual contract missing required path: \`${requiredPath}\`.`);
+    failures.push(
+      `Starter integration/visual contract missing required path: \`${requiredPath}\`.`,
+    );
   }
 }
 

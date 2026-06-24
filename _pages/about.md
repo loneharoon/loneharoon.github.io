@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: 
+subtitle:
 
 profile:
   align: right
@@ -29,21 +29,20 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an Assistant Professor in the [Department of EECS](https://eecs.iiserb.ac.in/) at [IISER Bhopal](https://www.iiserb.ac.in/), India. I direct [Systems and informatics Research Lab (SIRL)](https://sirl-lab.github.io/) at IISER Bhopal.  My research lies at the intersection of Human-Centered AI, Ubiquitous Computing, and Privacy-Aware Intelligent Systems. I develop sensing and machine learning technologies that operate on personal, mobile, and edge devices to address challenges in digital wellbeinga and  smart environments.
+I am an Assistant Professor in the [Department of EECS](https://eecs.iiserb.ac.in/) at [IISER Bhopal](https://www.iiserb.ac.in/), India. I direct [Systems and informatics Research Lab (SIRL)](https://sirl-lab.github.io/) at IISER Bhopal. My research lies at the intersection of Human-Centered AI, Ubiquitous Computing, and Privacy-Aware Intelligent Systems. I develop sensing and machine learning technologies that operate on personal, mobile, and edge devices to address challenges in digital wellbeinga and smart environments.
 
 ## Research Interests
 
- - Human-Centered AI
- - Ubiquitous Computing
- - Federated Learning
- - Mobile & Wearable Sensing
- - Digital Health
- - Privacy-Preserving Machine Learning
-
+- Human-Centered AI
+- Ubiquitous Computing
+- Federated Learning
+- Mobile & Wearable Sensing
+- Digital Health
+- Privacy-Preserving Machine Learning
 
 ## Quick Facts
- - Assistant Professor, Department of EECS, IISER Bhopal, India (2021 - current)
- - Visiting Assistant Professor, University of South Dakota, USA (2020 - 2021)
- - Postdoc, University of Virginia, USA (2020)
- - Ph.D., Computer Science & Engineering, IIIT Delhi (2019)
- 
+
+- Assistant Professor, Department of EECS, IISER Bhopal, India (2021 - current)
+- Visiting Assistant Professor, University of South Dakota, USA (2020 - 2021)
+- Postdoc, University of Virginia, USA (2020)
+- Ph.D., Computer Science & Engineering, IIIT Delhi (2019)

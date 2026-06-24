@@ -7,10 +7,16 @@ const REPO_TROPHY_STUB_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="400
 
 async function applyNetworkStubs(page) {
   const matchesBlockedHost = (requestUrl) => {
-    const blockedDomains = ["google-analytics.com", "plausible.io", "badge.dimensions.ai"];
+    const blockedDomains = [
+      "google-analytics.com",
+      "plausible.io",
+      "badge.dimensions.ai",
+    ];
     try {
       const hostname = new URL(requestUrl).hostname.toLowerCase();
-      return blockedDomains.some((domain) => hostname === domain || hostname.endsWith(`.${domain}`));
+      return blockedDomains.some(
+        (domain) => hostname === domain || hostname.endsWith(`.${domain}`),
+      );
     } catch {
       return false;
     }
@@ -83,14 +89,27 @@ function diffRatio(actualPng, baselinePng) {
   PNG.bitblt(actualPng, actual, 0, 0, width, height, 0, 0);
   PNG.bitblt(baselinePng, baseline, 0, 0, width, height, 0, 0);
   const diff = new PNG({ width, height });
-  const changed = pixelmatch(actual.data, baseline.data, diff.data, width, height, {
-    threshold: 0.1,
-    includeAA: false,
-  });
+  const changed = pixelmatch(
+    actual.data,
+    baseline.data,
+    diff.data,
+    width,
+    height,
+    {
+      threshold: 0.1,
+      includeAA: false,
+    },
+  );
   return changed / (width * height);
 }
 
-async function compareWithBaseline(context, currentPage, route, themeSetting, options = {}) {
+async function compareWithBaseline(
+  context,
+  currentPage,
+  route,
+  themeSetting,
+  options = {},
+) {
   const fullPage = options.fullPage !== false;
 
   const captureParityScreenshot = async (page) => {
@@ -108,13 +127,28 @@ async function compareWithBaseline(context, currentPage, route, themeSetting, op
       };
     });
 
-    if (dimensions.width <= maxScreenshotDimension && dimensions.height <= maxScreenshotDimension) {
+    if (
+      dimensions.width <= maxScreenshotDimension &&
+      dimensions.height <= maxScreenshotDimension
+    ) {
       return page.screenshot({ fullPage: true });
     }
 
     const viewport = page.viewportSize() || { width: 1280, height: 720 };
-    const clipWidth = Math.max(1, Math.min(Math.max(viewport.width, dimensions.width), maxScreenshotDimension));
-    const clipHeight = Math.max(1, Math.min(Math.max(viewport.height, dimensions.height), maxScreenshotDimension));
+    const clipWidth = Math.max(
+      1,
+      Math.min(
+        Math.max(viewport.width, dimensions.width),
+        maxScreenshotDimension,
+      ),
+    );
+    const clipHeight = Math.max(
+      1,
+      Math.min(
+        Math.max(viewport.height, dimensions.height),
+        maxScreenshotDimension,
+      ),
+    );
 
     return page.screenshot({
       fullPage: false,
@@ -132,8 +166,13 @@ async function compareWithBaseline(context, currentPage, route, themeSetting, op
     return null;
   }
   const normalizedRoute = route.replace(/^\//, "");
-  const normalizedBaselineRoot = baselineURL.endsWith("/") ? baselineURL : `${baselineURL}/`;
-  const baselineTarget = new URL(normalizedRoute, normalizedBaselineRoot).toString();
+  const normalizedBaselineRoot = baselineURL.endsWith("/")
+    ? baselineURL
+    : `${baselineURL}/`;
+  const baselineTarget = new URL(
+    normalizedRoute,
+    normalizedBaselineRoot,
+  ).toString();
 
   const baselinePage = await context.newPage();
   await preparePage(baselinePage, themeSetting);

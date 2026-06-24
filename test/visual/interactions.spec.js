@@ -17,20 +17,28 @@ test("publications Abs toggle opens and closes", async ({ page }) => {
   await expect(panel).not.toHaveClass(/open/);
 });
 
-test("publication popover works without bootstrap compat runtime", async ({ page }) => {
+test("publication popover works without bootstrap compat runtime", async ({
+  page,
+}) => {
   await preparePage(page, "light");
   await page.goto("/al-folio/publications/", { waitUntil: "networkidle" });
   await stabilizeVisuals(page);
 
   const popoverTrigger = page.locator('[data-toggle="popover"]').first();
-  test.skip((await popoverTrigger.count()) === 0, "no popover trigger found in fixture data");
+  test.skip(
+    (await popoverTrigger.count()) === 0,
+    "no popover trigger found in fixture data",
+  );
 
   await popoverTrigger.hover();
   await expect(page.locator(".af-popover")).toBeVisible();
 });
 
 test("mobile navbar can expand/collapse", async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== "mobile", "mobile-only navigation behavior");
+  test.skip(
+    testInfo.project.name !== "mobile",
+    "mobile-only navigation behavior",
+  );
 
   await preparePage(page, "light");
   await page.goto("/al-folio/", { waitUntil: "networkidle" });
@@ -46,19 +54,28 @@ test("mobile navbar can expand/collapse", async ({ page }, testInfo) => {
   await expect(nav).not.toHaveClass(/show/);
 });
 
-test("repositories page renders external stat cards with deterministic fixtures", async ({ page }) => {
+test("repositories page renders external stat cards with deterministic fixtures", async ({
+  page,
+}) => {
   await preparePage(page, "light");
   await page.goto("/al-folio/repositories/", { waitUntil: "networkidle" });
   await stabilizeVisuals(page);
 
-  const repoImages = page.locator('img[src*="github-readme-stats"], img[src*="github-profile-trophy"]');
+  const repoImages = page.locator(
+    'img[src*="github-readme-stats"], img[src*="github-profile-trophy"]',
+  );
   await expect(repoImages.first()).toBeVisible();
 
-  const renderedCount = await repoImages.evaluateAll((images) => images.filter((img) => img.complete && img.naturalWidth > 0).length);
+  const renderedCount = await repoImages.evaluateAll(
+    (images) =>
+      images.filter((img) => img.complete && img.naturalWidth > 0).length,
+  );
   expect(renderedCount).toBeGreaterThan(0);
 });
 
-test("blog pagination uses core Tailwind-native styling contract", async ({ page }) => {
+test("blog pagination uses core Tailwind-native styling contract", async ({
+  page,
+}) => {
   await preparePage(page, "light");
   await page.goto("/al-folio/blog/", { waitUntil: "networkidle" });
   await stabilizeVisuals(page);
@@ -85,8 +102,13 @@ test("blog pagination uses core Tailwind-native styling contract", async ({ page
   expect(styles.paddingLeft).not.toBe("0px");
 });
 
-test("navbar menu stays right-aligned on desktop pages", async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name === "mobile", "desktop-only alignment contract");
+test("navbar menu stays right-aligned on desktop pages", async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    testInfo.project.name === "mobile",
+    "desktop-only alignment contract",
+  );
 
   await preparePage(page, "light");
   await page.goto("/al-folio/", { waitUntil: "networkidle" });
@@ -107,11 +129,18 @@ test("navbar menu stays right-aligned on desktop pages", async ({ page }, testIn
   });
 
   expect(alignment).not.toBeNull();
-  expect(Math.abs(alignment.menuRight - alignment.containerRight)).toBeLessThanOrEqual(24);
+  expect(
+    Math.abs(alignment.menuRight - alignment.containerRight),
+  ).toBeLessThanOrEqual(24);
 });
 
-test("navbar search button opens modal and toggle buttons use pointer cursor", async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name === "mobile", "navbar search/theme controls are collapsed under mobile menu");
+test("navbar search button opens modal and toggle buttons use pointer cursor", async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    testInfo.project.name === "mobile",
+    "navbar search/theme controls are collapsed under mobile menu",
+  );
 
   await preparePage(page, "light");
   await page.goto("/al-folio/", { waitUntil: "networkidle" });
@@ -131,11 +160,17 @@ test("navbar search button opens modal and toggle buttons use pointer cursor", a
   });
 
   await page.click("#search-toggle");
-  const modalOpened = await page.evaluate(() => Boolean(document.querySelector("ninja-keys")?.__openCalled));
+  const modalOpened = await page.evaluate(() =>
+    Boolean(document.querySelector("ninja-keys")?.__openCalled),
+  );
   expect(modalOpened).toBeTruthy();
 
-  const searchCursor = await page.locator("#search-toggle").evaluate((el) => window.getComputedStyle(el).cursor);
-  const themeCursor = await page.locator("#light-toggle").evaluate((el) => window.getComputedStyle(el).cursor);
+  const searchCursor = await page
+    .locator("#search-toggle")
+    .evaluate((el) => window.getComputedStyle(el).cursor);
+  const themeCursor = await page
+    .locator("#light-toggle")
+    .evaluate((el) => window.getComputedStyle(el).cursor);
   expect(searchCursor).toBe("pointer");
   expect(themeCursor).toBe("pointer");
 });
@@ -145,7 +180,9 @@ test("related posts are wrapped in a valid list", async ({ page }) => {
   await page.goto("/al-folio/blog/2023/tables/", { waitUntil: "networkidle" });
   await stabilizeVisuals(page);
 
-  const heading = page.getByRole("heading", { name: "Enjoy Reading This Article?" });
+  const heading = page.getByRole("heading", {
+    name: "Enjoy Reading This Article?",
+  });
   await expect(heading).toBeVisible();
 
   const relatedList = heading.locator("xpath=following::ul[1]");
@@ -155,17 +192,24 @@ test("related posts are wrapped in a valid list", async ({ page }) => {
   const relatedLinkWeight = await relatedList
     .locator("a")
     .first()
-    .evaluate((el) => Number.parseInt(window.getComputedStyle(el).fontWeight, 10) || 400);
+    .evaluate(
+      (el) =>
+        Number.parseInt(window.getComputedStyle(el).fontWeight, 10) || 400,
+    );
   expect(relatedLinkWeight).toBeLessThanOrEqual(400);
 });
 
 test("inline code uses compact normal-weight typography", async ({ page }) => {
   await preparePage(page, "light");
-  await page.goto("/al-folio/blog/2023/sidebar-table-of-contents/", { waitUntil: "networkidle" });
+  await page.goto("/al-folio/blog/2023/sidebar-table-of-contents/", {
+    waitUntil: "networkidle",
+  });
   await stabilizeVisuals(page);
 
   const inlineCodeStyle = await page.evaluate(() => {
-    const candidate = Array.from(document.querySelectorAll("main code, [role='main'] code")).find((el) => !el.closest("pre"));
+    const candidate = Array.from(
+      document.querySelectorAll("main code, [role='main'] code"),
+    ).find((el) => !el.closest("pre"));
     if (!candidate) {
       return null;
     }
@@ -173,7 +217,11 @@ test("inline code uses compact normal-weight typography", async ({ page }) => {
     const numericWeight = Number.parseInt(computed.fontWeight, 10);
     return {
       fontSize: Number.parseFloat(computed.fontSize),
-      fontWeight: Number.isNaN(numericWeight) ? (computed.fontWeight === "bold" ? 700 : 400) : numericWeight,
+      fontWeight: Number.isNaN(numericWeight)
+        ? computed.fontWeight === "bold"
+          ? 700
+          : 400
+        : numericWeight,
     };
   });
 
@@ -182,8 +230,13 @@ test("inline code uses compact normal-weight typography", async ({ page }) => {
   expect(inlineCodeStyle.fontWeight).toBeLessThanOrEqual(400);
 });
 
-test("project cards hover with upward lift animation", async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name === "mobile", "hover-specific assertion is desktop-only");
+test("project cards hover with upward lift animation", async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    testInfo.project.name === "mobile",
+    "hover-specific assertion is desktop-only",
+  );
 
   await preparePage(page, "light");
   await page.goto("/al-folio/projects/", { waitUntil: "networkidle" });
@@ -202,7 +255,9 @@ test("project cards hover with upward lift animation", async ({ page }, testInfo
   expect(after.y).toBeLessThan(before.y);
 });
 
-test("teaching calendar toggle has pointer cursor and toggles calendar visibility", async ({ page }) => {
+test("teaching calendar toggle has pointer cursor and toggles calendar visibility", async ({
+  page,
+}) => {
   await preparePage(page, "light");
   await page.goto("/al-folio/teaching/", { waitUntil: "networkidle" });
   await stabilizeVisuals(page);
@@ -222,11 +277,18 @@ test("teaching calendar toggle has pointer cursor and toggles calendar visibilit
   await expect(button).toContainText("Hide Calendar");
 });
 
-test("toc sidebar renders with tocbot styling and data-toc-text label", async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name === "mobile", "TOC sidebar is hidden on mobile viewport");
+test("toc sidebar renders with tocbot styling and data-toc-text label", async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    testInfo.project.name === "mobile",
+    "TOC sidebar is hidden on mobile viewport",
+  );
 
   await preparePage(page, "light");
-  await page.goto("/al-folio/blog/2023/sidebar-table-of-contents/", { waitUntil: "networkidle" });
+  await page.goto("/al-folio/blog/2023/sidebar-table-of-contents/", {
+    waitUntil: "networkidle",
+  });
   await stabilizeVisuals(page);
 
   const tocSidebar = page.locator("#toc-sidebar");
@@ -238,7 +300,9 @@ test("toc sidebar renders with tocbot styling and data-toc-text label", async ({
   await firstLink.hover();
   const tocDecor = await firstLink.evaluate((el) => {
     const linkStyle = window.getComputedStyle(el);
-    const listBorders = Array.from(document.querySelectorAll("#toc-sidebar .toc-list")).map((list) => window.getComputedStyle(list).borderLeftWidth);
+    const listBorders = Array.from(
+      document.querySelectorAll("#toc-sidebar .toc-list"),
+    ).map((list) => window.getComputedStyle(list).borderLeftWidth);
     return {
       linkBorderLeftWidth: linkStyle.borderLeftWidth,
       listBorders,
@@ -247,8 +311,12 @@ test("toc sidebar renders with tocbot styling and data-toc-text label", async ({
   expect(tocDecor.linkBorderLeftWidth).toBe("0px");
   expect(tocDecor.listBorders.every((value) => value === "0px")).toBeTruthy();
 
-  await page.getByRole("heading", { name: "Customizing Your Table of Contents" }).scrollIntoViewIfNeeded();
-  await expect.poll(async () => tocSidebar.locator(".toc-link.is-active-link").count()).toBeGreaterThan(0);
+  await page
+    .getByRole("heading", { name: "Customizing Your Table of Contents" })
+    .scrollIntoViewIfNeeded();
+  await expect
+    .poll(async () => tocSidebar.locator(".toc-link.is-active-link").count())
+    .toBeGreaterThan(0);
 
   const activeDecor = await tocSidebar
     .locator(".toc-link.is-active-link")
@@ -264,7 +332,9 @@ test("toc sidebar renders with tocbot styling and data-toc-text label", async ({
   expect(activeDecor.markerColor).toBe(activeDecor.activeColor);
 });
 
-test("tailwind table engine provides search, pagination, and sorting in pretty tables", async ({ page }) => {
+test("tailwind table engine provides search, pagination, and sorting in pretty tables", async ({
+  page,
+}) => {
   await preparePage(page, "light");
   await page.goto("/al-folio/blog/2023/tables/", { waitUntil: "networkidle" });
   await stabilizeVisuals(page);
@@ -282,12 +352,18 @@ test("tailwind table engine provides search, pagination, and sorting in pretty t
   const sortableHeader = interactiveTable.locator('thead th[data-field="id"]');
   await sortableHeader.click();
   await sortableHeader.click();
-  await expect(interactiveTable.locator("tbody tr").first().locator("td").nth(1)).toHaveText("20");
+  await expect(
+    interactiveTable.locator("tbody tr").first().locator("td").nth(1),
+  ).toHaveText("20");
 });
 
-test("lightbox galleries open in-page modal instead of navigating away", async ({ page }) => {
+test("lightbox galleries open in-page modal instead of navigating away", async ({
+  page,
+}) => {
   await preparePage(page, "light");
-  await page.goto("/al-folio/blog/2024/photo-gallery/", { waitUntil: "networkidle" });
+  await page.goto("/al-folio/blog/2024/photo-gallery/", {
+    waitUntil: "networkidle",
+  });
   await stabilizeVisuals(page);
 
   const firstLightboxLink = page.locator("a[data-lightbox]").first();
@@ -296,17 +372,27 @@ test("lightbox galleries open in-page modal instead of navigating away", async (
 
   const overlay = page.locator(".al-lightbox-overlay");
   await expect(overlay).toHaveClass(/is-open/);
-  await expect(page.locator(".al-lightbox-image")).toHaveAttribute("src", firstHref);
+  await expect(page.locator(".al-lightbox-image")).toHaveAttribute(
+    "src",
+    firstHref,
+  );
 
-  const firstImageSrc = await page.locator(".al-lightbox-image").getAttribute("src");
+  const firstImageSrc = await page
+    .locator(".al-lightbox-image")
+    .getAttribute("src");
   await page.locator(".al-lightbox-next").click();
-  await expect(page.locator(".al-lightbox-image")).not.toHaveAttribute("src", firstImageSrc);
+  await expect(page.locator(".al-lightbox-image")).not.toHaveAttribute(
+    "src",
+    firstImageSrc,
+  );
 
   await page.keyboard.press("Escape");
   await expect(overlay).not.toHaveClass(/is-open/);
 });
 
-test("core pages no longer emit jQuery-style runtime errors", async ({ page }) => {
+test("core pages no longer emit jQuery-style runtime errors", async ({
+  page,
+}) => {
   const failures = [];
   page.on("pageerror", (error) => failures.push(error.message));
   page.on("console", (message) => {
@@ -316,13 +402,20 @@ test("core pages no longer emit jQuery-style runtime errors", async ({ page }) =
   });
 
   await preparePage(page, "light");
-  const pages = ["/al-folio/", "/al-folio/projects/", "/al-folio/blog/2024/photo-gallery/", "/al-folio/blog/2023/tables/"];
+  const pages = [
+    "/al-folio/",
+    "/al-folio/projects/",
+    "/al-folio/blog/2024/photo-gallery/",
+    "/al-folio/blog/2023/tables/",
+  ];
 
   for (const target of pages) {
     await page.goto(target, { waitUntil: "networkidle" });
     await stabilizeVisuals(page);
   }
 
-  const jqueryFailures = failures.filter((message) => /\$\s*is not defined|lightbox/i.test(message));
+  const jqueryFailures = failures.filter((message) =>
+    /\$\s*is not defined|lightbox/i.test(message),
+  );
   expect(jqueryFailures).toEqual([]);
 });

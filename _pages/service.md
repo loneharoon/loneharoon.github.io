@@ -2,12 +2,12 @@
 layout: page
 permalink: /service/
 title: service
-description: 
+description:
 nav: true
 nav_order: 4
 ---
 
-## Community Service 
+## Community Service
 
 - Editor, PLOS Mental Health (2023 - present)
 - Reviewer 2026 (IMWUT, MobileHCI, CHASE, Ubicomp/ISWC)
@@ -46,8 +46,3 @@ nav_order: 4
 - March 15, 2017: Invited talk at NIT Srinagar. [Slides](https://goo.gl/o7FMVu)
 - July 21, 2016: ITRA project meeting at IIIT Hyderabad. Also presented a [Poster](/assets/posters/poster_ITRA_2016.pdf)
 - January 10, 2016: ITRA project meeting at Bangalore. Also presented a [Poster](/assets/posters/poster_ITRA2016jan.pdf)
-
-
-
-
-
