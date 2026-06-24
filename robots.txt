@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://loneharoon.github.io//sitemap.xml
